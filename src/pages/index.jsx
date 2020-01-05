@@ -4,8 +4,8 @@ import "../layout/index.css"
 import { ContextWrapper } from "../contexts/ContextWrapper"
 
 const Index = () => {
-  const { count } = useContext(ContextWrapper)
-  console.log(count)
+  const { theme } = useContext(ContextWrapper)
+
   return <Layout>asd</Layout>
 }
 
