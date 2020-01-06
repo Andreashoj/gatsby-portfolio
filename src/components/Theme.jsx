@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
-import { ContextWrapper } from "../contexts/ContextWrapper"
 import styled from "styled-components"
 import moon from "../assets/moon.svg"
+import { ContextWrapper } from "../contexts/ContextWrapper"
 
 const Theme = () => {
   const { theme, setTheme } = useContext(ContextWrapper)
@@ -23,7 +23,6 @@ const ThemeWrapper = styled.div`
     height: 50px;
     width: 50px;
   }
-  ${theme === "light" ? console.log("yo") : null}
 `
 
 export default Theme
