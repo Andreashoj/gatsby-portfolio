@@ -1,8 +1,8 @@
-import React, { Component } from "react"
-import logo from "../assets/logo.svg"
-import "../layout/index.css"
 import { Link } from "gatsby"
+import React from "react"
 import styled from "styled-components"
+import logo from "../assets/logo.svg"
+import "../styles/index.css"
 
 const Navigation = () => {
   return (
@@ -53,6 +53,7 @@ const NavLinks = styled.div`
     font-size: 1.2rem;
     margin-right: 40px;
     overflow: hidden;
+    padding-top: 1px;
     span {
       display: inline-block;
       position: relative;

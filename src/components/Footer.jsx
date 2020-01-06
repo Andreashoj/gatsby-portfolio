@@ -1,12 +1,8 @@
-import React, { Component } from "react"
+import React from "react"
 import styled from "styled-components"
 
 const Footer = () => {
-  return (
-    <FooterComponent>
-      <h3>{new Date().getFullYear()} ©</h3>
-    </FooterComponent>
-  )
+  return <FooterComponent></FooterComponent>
 }
 
 const FooterComponent = styled.footer`

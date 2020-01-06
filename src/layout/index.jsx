@@ -2,13 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import Footer from "../components/Footer"
 import Navigation from "../components/Navigation"
-import Theme from "../components/Theme"
 
 export default ({ children }) => (
   <div className="app-wrapper">
     <Navigation />
     <Wrapper>{children}</Wrapper>
-    <Theme />
     <Footer />
   </div>
 )
