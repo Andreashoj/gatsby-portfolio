@@ -4,10 +4,10 @@ export const ContextWrapper = createContext()
 
 const ContextWrapperProvider = props => {
   const [theme, setTheme] = useState("light")
-  console.log("yi")
+  const [spinner, setSpinner] = useState(true)
 
   return (
-    <ContextWrapper.Provider value={{ theme }}>
+    <ContextWrapper.Provider value={{ theme, spinner, setSpinner }}>
       {props.children}
     </ContextWrapper.Provider>
   )
