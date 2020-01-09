@@ -6,6 +6,7 @@ import Indicator from "../components/Indicator"
 import Spinner from "../components/Spinner"
 import { ContextWrapper } from "../contexts/ContextWrapper"
 import Layout from "../layout/index.jsx"
+import HeaderIllu from "../assets/frontpage_illustration.svg"
 import "../styles/index.css"
 
 const Index = () => {
@@ -29,7 +30,9 @@ const Index = () => {
               </AwesomeButton>
             </Button>
           </Header>
-          <Animation>Animation</Animation>
+          <HeaderImage>
+            <img src={HeaderIllu} />
+          </HeaderImage>
           <Indicator />
         </IndexWrapper>
       )}
@@ -65,8 +68,13 @@ const Header = styled.div`
   }
 `
 
-const Animation = styled.div`
+const HeaderImage = styled.div`
   height: 80%;
+  max-width: 50%;
+  img {
+    height: 50%;
+    width: 100%;
+  }
 `
 
 export default Index
