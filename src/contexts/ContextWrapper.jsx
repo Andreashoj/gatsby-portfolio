@@ -1,13 +1,16 @@
 import React, { createContext, useState } from "react"
 
-export const ContextWrapper = createContext()
+const defaultState = {
+  spinner: true,
+}
+
+export const ContextWrapper = createContext(defaultState)
 
 const ContextWrapperProvider = props => {
-  const [theme, setTheme] = useState("light")
   const [spinner, setSpinner] = useState(true)
 
   return (
-    <ContextWrapper.Provider value={{ theme, spinner, setSpinner }}>
+    <ContextWrapper.Provider value={{ spinner, setSpinner }}>
       {props.children}
     </ContextWrapper.Provider>
   )
