@@ -12,6 +12,9 @@ a {
 
 p,
 button,
-div {
+div,
+label,
+form,
+input {
   font-family: "DM Sans", sans-serif;
 }
