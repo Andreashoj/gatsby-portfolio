@@ -15,7 +15,9 @@ const Index = () => {
   return (
     <>
       {spinner ? (
-        <Spinner loading={spinner} setLoading={setSpinner} />
+        <SpinnerContainer>
+          <Spinner loading={spinner} setLoading={setSpinner} />
+        </SpinnerContainer>
       ) : (
         <Layout>
           <IndexWrapper>
@@ -78,6 +80,11 @@ const HeaderImage = styled.div`
     height: 50%;
     width: 100%;
   }
+`
+
+const SpinnerContainer = styled.div`
+  height: 100vh;
+  width: 100%;
 `
 
 export default Index
