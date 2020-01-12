@@ -5,7 +5,7 @@ import styled from "styled-components"
 const Spinner = ({ loading, setLoading }) => {
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false)
+      setLoading(true)
     }, 3000)
   }, [])
 
