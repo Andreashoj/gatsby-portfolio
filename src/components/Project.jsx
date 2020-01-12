@@ -7,19 +7,21 @@ const Project = ({ project }) => {
     <ProjectContainer backgroundColor={project.backgroundColor}>
       <img src={project.image} alt="" className="project-logo" />
       <div className="card-wrapper">
-        <div className="card-details">
-          <div>
-            <h3>{project.name}</h3>
-            <p>{project.description}</p>
+        <div className="card-container">
+          <div className="card-details">
+            <div>
+              <h3>{project.name}</h3>
+              <p>{project.description}</p>
+            </div>
+            <a href={project.github.link} target="_blank">
+              <img src={project.github.icon} className="github-link" />
+            </a>
           </div>
-          <a href={project.github.link} target="_blank">
-            <img src={project.github.icon} className="github-link" />
-          </a>
-        </div>
-        <div className="icon-wrapper">
-          {project.icons.map(icon => (
-            <img src={icon} className="technology-icon" />
-          ))}
+          <div className="icon-wrapper">
+            {project.icons.map(icon => (
+              <img src={icon} className="technology-icon" />
+            ))}
+          </div>
         </div>
       </div>
     </ProjectContainer>
@@ -48,9 +50,12 @@ const ProjectContainer = styled.div`
       top: 70%;
     }
   }
+
   .card-wrapper {
     position: absolute;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
     top: 100%;
     height: 30%;
     width: 100%;
@@ -64,6 +69,10 @@ const ProjectContainer = styled.div`
       justify-content: space-between;
       width: 100%;
     }
+    .card-container {
+      height: 100%;
+      padding: 15px;
+    }
     .github-link {
       height: 35px;
       padding: 0 20px 0 0;
@@ -75,6 +84,30 @@ const ProjectContainer = styled.div`
     }
     .icon-wrapper {
       display: flex;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    &:hover {
+      transform: scale(1.05);
+      div {
+        top: 73%;
+      }
+    }
+    .card-wrapper {
+      height: 27%;
+    }
+  }
+
+  @media (min-width: 2200px) {
+    &:hover {
+      transform: scale(1.05);
+      div {
+        top: 80%;
+      }
+    }
+    .card-wrapper {
+      height: 20%;
     }
   }
 `

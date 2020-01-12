@@ -1,8 +1,8 @@
-import React, { Component } from "react"
+import React from "react"
 import styled from "styled-components"
+import discord from "../assets/discord.svg"
 import github from "../assets/github_blue.svg"
 import linkedin from "../assets/linkedin.svg"
-import discord from "../assets/discord.svg"
 
 const Form = () => {
   return (
@@ -70,6 +70,7 @@ const ContactForm = styled.form`
     height: 40px;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
   }
   .contact-icons {
     img {

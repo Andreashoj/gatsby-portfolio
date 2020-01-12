@@ -16,9 +16,9 @@ export default ({ children }) => {
       <Navigation />
       <Wrapper>
         {transitions.map(({ item, key, props }) => (
-          <animated.div key={key} style={props}>
+          <Content key={key} style={props}>
             {item}
-          </animated.div>
+          </Content>
         ))}
       </Wrapper>
       <Footer />
@@ -31,4 +31,8 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   height: calc(100vh - 90px);
+`
+
+const Content = styled(animated.div)`
+  width: 85%;
 `

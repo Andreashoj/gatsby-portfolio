@@ -1,14 +1,13 @@
 import React, { useState } from "react"
-import Layout from "../layout"
-import Project from "../components/Project"
 import styled from "styled-components"
-import github from "../assets/github.svg"
 import css from "../assets/css.svg"
-import react from "../assets/react.svg"
-import node from "../assets/node.svg"
-import sass from "../assets/sass.svg"
+import github from "../assets/github.svg"
 import html from "../assets/html.svg"
+import react from "../assets/react.svg"
+import sass from "../assets/sass.svg"
 import stackit from "../assets/stackit.svg"
+import Project from "../components/Project"
+import Layout from "../layout"
 
 const Projects = () => {
   const [projects] = useState([
@@ -71,7 +70,7 @@ const Projects = () => {
 }
 
 const ProjectsContainer = styled.div`
-  width: 85%;
+  width: 100%;
   display: flex;
   height: 100%;
   flex-direction: column;

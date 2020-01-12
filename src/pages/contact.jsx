@@ -1,8 +1,8 @@
-import React, { Component } from "react"
-import Layout from "../layout"
+import React from "react"
 import styled from "styled-components"
 import ContactIllu from "../assets/contact_illustration.svg"
 import Form from "../components/Form"
+import Layout from "../layout"
 
 const contact = () => {
   return (
@@ -25,7 +25,8 @@ const contact = () => {
 }
 
 const ContactContainer = styled.div`
-  width: 85%;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: flex-end;
   .form-wrapper {

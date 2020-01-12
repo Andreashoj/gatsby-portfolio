@@ -1,7 +1,7 @@
-import React, { Component } from "react"
-import Layout from "../layout"
+import React from "react"
 import styled from "styled-components"
 import AboutIllu from "../assets/about_illustration.svg"
+import Layout from "../layout"
 
 const about = () => {
   return (
@@ -52,13 +52,16 @@ h1 {
 p {
   font-size: 20px;
   width: 80%;
+  max-width: 550px;
 }
 `
 
 const AboutContainer = styled.div`
-  width: 85%;
+  width: 100%;
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
+  height: 100%;
 `
 
 const Button = styled.a`
@@ -99,12 +102,13 @@ const AboutText = styled.div`
   p {
     font-size: 16px;
     width: 80%;
+    max-width: 550px;
   }
 `
 
 const HeaderImage = styled.div`
-  height: 80%;
-  max-width: 50%;
+  height: 90%;
+  width: 50%;
   img {
     height: 50%;
     width: 100%;
