@@ -11,18 +11,7 @@ const Spinner = ({ loading, setLoading }) => {
 
   return (
     <SpinnerWrapper>
-      <div
-        className="wrapper"
-        style="    height: 100vh;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    background-color: white;
-    top: 0;"
-      >
+      <div className="wrapper">
         <BounceLoader size={50} color={"#123abc"} loading={loading} />
       </div>
     </SpinnerWrapper>
