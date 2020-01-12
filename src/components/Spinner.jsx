@@ -5,7 +5,7 @@ import styled from "styled-components"
 const Spinner = ({ loading, setLoading }) => {
   useEffect(() => {
     setTimeout(() => {
-      setLoading(true)
+      setLoading(false)
     }, 3000)
   }, [])
 
@@ -13,7 +13,7 @@ const Spinner = ({ loading, setLoading }) => {
     <SpinnerWrapper>
       <div
         className="wrapper"
-        styles="    height: 100vh;
+        style="    height: 100vh;
     width: 100%;
     position: absolute;
     display: flex;
