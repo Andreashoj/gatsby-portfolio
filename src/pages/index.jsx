@@ -9,9 +9,11 @@ import Spinner from "../components/Spinner"
 import { ContextWrapper } from "../contexts/ContextWrapper"
 import Layout from "../layout/index.jsx"
 import "../styles/index.css"
+import useWidth from "../components/hooks/useWidth"
 
 const Index = () => {
   const { spinner, setSpinner } = useContext(ContextWrapper)
+  const width = useWidth()
 
   return (
     <>
@@ -39,7 +41,7 @@ const Index = () => {
             <HeaderImage>
               <img src={HeaderIllu} />
             </HeaderImage>
-            <Indicator />
+            {width > 800 ? <Indicator /> : null}
           </IndexWrapper>
         </Layout>
       )}

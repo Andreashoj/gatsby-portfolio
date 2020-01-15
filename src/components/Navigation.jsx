@@ -4,23 +4,11 @@ import styled from "styled-components"
 import logo from "../assets/logo.svg"
 import MobileNav from "../components/MobileNavigation"
 import "../styles/index.css"
+import useWidth from "./hooks/useWidth"
 
 const Navigation = () => {
-  const [width, setWidth] = useState()
+  const width = useWidth()
 
-  useEffect(() => {
-    setWidth(window.innerWidth)
-  }, [])
-
-  useEffect(() => {
-    function handleResize() {
-      setWidth(window.innerWidth)
-    }
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [width])
-
-  console.log(width)
   return width < 1000 ? (
     <MobileNav />
   ) : (
