@@ -54,6 +54,9 @@ const IndexWrapper = styled.div`
   align-items: flex-end;
   flex-wrap: wrap;
   overflow: hidden;
+  @media (max-width: 800px) {
+    height: auto;
+  }
 `
 
 const Button = styled.div`
