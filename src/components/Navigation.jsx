@@ -6,7 +6,11 @@ import MobileNav from "../components/MobileNavigation"
 import "../styles/index.css"
 
 const Navigation = () => {
-  const [width, setWidth] = useState(window.innerWidth)
+  const [width, setWidth] = useState()
+
+  useEffect(() => {
+    setWidth(window.innerWidth)
+  }, [])
 
   useEffect(() => {
     function handleResize() {
