@@ -53,6 +53,7 @@ const IndexWrapper = styled.div`
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
+  overflow: hidden;
 `
 
 const Button = styled.div`
@@ -94,7 +95,6 @@ const HeaderImage = styled.div`
   }
   @media (max-width: 900px) {
     max-width: 100%;
-    height: auto;
   }
 `
 

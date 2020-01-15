@@ -31,6 +31,9 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   height: calc(100vh - 90px);
+  @media (max-width: 800px) {
+    height: auto;
+  }
 `
 
 const Content = styled(animated.div)`
