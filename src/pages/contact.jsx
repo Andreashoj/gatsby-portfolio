@@ -30,7 +30,7 @@ const ContactContainer = styled.div`
   display: flex;
   align-items: flex-end;
   .form-wrapper {
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     height: 85%;

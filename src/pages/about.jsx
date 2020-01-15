@@ -1,12 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import AboutIllu from "../assets/about_illustration.svg"
 import Layout from "../layout"
 
-const about = () => {
+const About = () => {
+  const [show, setShow] = useState("career")
+
   return (
     <Layout>
-      <AboutContainer>
+      <AboutContainer activated={show}>
         <Header>
           <h1>About me</h1>
           <p>
@@ -15,21 +17,34 @@ const about = () => {
           </p>
           <AboutText>
             <div>
-              <Button href="">
+              <Button onClick={() => setShow("hobbies")}>
                 <span>Hobbies</span>
               </Button>
 
-              <Button href="">
+              <Button onClick={() => setShow("career")}>
                 <span>Career</span>
               </Button>
             </div>
             <div>
-              <p>
-                I spend a lot of time doing random things with my buddies and
-                playing games. I also have a big family that I spend my time
-                with. Other than that I enjoy working out and try to reach new
-                personal heights :)
-              </p>
+              {show === "career" ? (
+                <p>
+                  At the moment i’m studying Webdevelopment at UCL, getting my
+                  bachelor. I am very passionate about creating and learning new
+                  things and I’ve found frontend development to be the perfect
+                  fit for my needs. I started doing design, then slowly
+                  progressed to coding with HTML/CSS/JS then took those skills
+                  and moved on to React. The web is the perfect place to get
+                  crazy creative with both design and code, that’s why I enjoy
+                  it so much.{" "}
+                </p>
+              ) : (
+                <p>
+                  I spend a lot of time doing random things with my buddies and
+                  playing games. I also have a big family that I spend my time
+                  with. Other than that I enjoy working out and try to reach new
+                  personal heights :)
+                </p>
+              )}
             </div>
           </AboutText>
         </Header>
@@ -62,6 +77,31 @@ const AboutContainer = styled.div`
   align-items: flex-end;
   justify-content: space-between;
   height: 100%;
+  a:nth-of-type(1) {
+    span {
+      ${props =>
+        props.activated === "hobbies"
+          ? "transform: translateY(-100%) !important"
+          : null}
+      &::before {
+        content: "Hobbies";
+      }
+    }
+  }
+  a:nth-of-type(2) {
+    span {
+      ${props =>
+        props.activated === "career"
+          ? "transform: translateY(-100%) !important"
+          : null}
+      &::before {
+        content: "Career";
+      }
+      &:hover {
+        transform: translateY(-100%);
+      }
+    }
+  }
 `
 
 const Button = styled.a`
@@ -75,12 +115,13 @@ const Button = styled.a`
   margin-right: 20px;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
+
   span {
     display: inline-block;
     position: relative;
     transition: transform 0.2s ease;
     &::before {
-      content: 'Career';
       color: white;
       background-color: black;
       position: absolute;
@@ -115,4 +156,4 @@ const HeaderImage = styled.div`
   }
 `
 
-export default about
+export default About

@@ -9,19 +9,20 @@ const Form = () => {
     <ContactForm
       action="https://getform.io/f/10e74d12-253c-47d2-8204-235df94c8195"
       method="POST"
+      enctype="multipart/form-data"
     >
       <div className="input-container">
         <label htmlFor="name">Name</label>
-        <input type="text" id="name" />
+        <input type="text" id="name" name="name" />
       </div>
       <div className="input-container">
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" />
+        <input type="email" id="email" name="email" />
       </div>
       <div className="input-container">
         <label htmlFor="message">Message</label>
         <br />
-        <textarea type="textarea" id="message" rows="10" />
+        <textarea type="textarea" id="message" rows="10" name="message" />
       </div>
       <div className="contact-links">
         <button type="submit">Submit</button>
@@ -46,7 +47,7 @@ const ContactForm = styled.form`
   height: 80%;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 50%;
   align-items: center;
   input {
     width: 100%;
@@ -89,6 +90,7 @@ const ContactForm = styled.form`
     textarea {
       width: 100%;
       height: 150px !important;
+      padding-top: 10px;
     }
     input,
     textarea {
@@ -97,6 +99,7 @@ const ContactForm = styled.form`
       border-radius: 5px;
       border: none;
       margin: 5px 0 20px 0;
+      text-indent: 15px;
     }
   }
 `

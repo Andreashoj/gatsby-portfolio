@@ -15,7 +15,8 @@ button,
 div,
 label,
 form,
-input {
+input,
+textarea {
   font-family: "DM Sans", sans-serif;
 }
 

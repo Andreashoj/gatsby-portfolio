@@ -23,7 +23,7 @@ const Projects = () => {
       icons: [css, html, sass, react],
     },
     {
-      name: "Project 1",
+      name: "Project 2",
       description: "blabla",
       image: "",
       backgroundColor: "#262626",
@@ -31,15 +31,15 @@ const Projects = () => {
       icons: [github],
     },
     {
-      name: "Project 1",
+      name: "Project 3",
       description: "blabla",
       image: "",
-      backgroundColor: "#",
+      backgroundColor: "#F6F6F6",
       github: { link: "www.linkedin.com", icon: github },
       icons: [github],
     },
     {
-      name: "Project 1",
+      name: "Project 4",
       description: "blabla",
       image: "",
       backgroundColor: "#119DA4",
@@ -60,7 +60,7 @@ const Projects = () => {
           </Header>
           <ProjectsWrapper>
             {projects.map(project => {
-              return <Project project={project} />
+              return <Project project={project} key={project.name} />
             })}
           </ProjectsWrapper>
         </Wrapper>
@@ -98,6 +98,10 @@ const ProjectsWrapper = styled.div`
   justify-content: space-between;
   margin-top: 50px;
   height: 70%;
+  @media (max-width: 800px) {
+    height: 100%;
+    flex-wrap: wrap;
+  }
 `
 
 export default Projects

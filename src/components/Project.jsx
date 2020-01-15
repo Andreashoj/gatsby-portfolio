@@ -31,6 +31,7 @@ const Project = ({ project }) => {
 const ProjectContainer = styled.div`
   position: relative;
   width: 23%;
+  min-width: 200px;
   display: flex;
   justify-content: center;
   height: 85%;
@@ -38,6 +39,11 @@ const ProjectContainer = styled.div`
   background-color: ${props => props.backgroundColor};
   transition: all 0.3s ease;
   overflow: hidden;
+  @media (max-width: 800px) {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 60%;
+  }
   .project-logo {
     width: 80%;
     height: 100px;

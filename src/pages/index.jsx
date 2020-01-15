@@ -28,7 +28,7 @@ const Index = () => {
                 fantastic!
               </p>
               <Button>
-                <AwesomeButton type="primary" size="large">
+                <AwesomeButton type="primary" size="large" href="/projects">
                   Look at my work
                 </AwesomeButton>
               </Button>
@@ -49,6 +49,7 @@ const IndexWrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: flex-end;
+  flex-wrap: wrap;
 `
 
 const Button = styled.div`
@@ -70,15 +71,26 @@ const Header = styled.div`
   }
   p {
     font-size: 20px;
+    margin: 0px 0 20px 0;
+  }
+  @media (max-width: 900px) {
+    margin: 100px 0 50px 0;
+    width: 100%;
+    height: auto;
+
   }
 `
 
 const HeaderImage = styled.div`
   height: 80%;
   max-width: 50%;
+  min-width: 380px;
   img {
     height: 50%;
     width: 100%;
+  }
+  @media (max-width: 900px) {
+    max-width: 100%;
   }
 `
 

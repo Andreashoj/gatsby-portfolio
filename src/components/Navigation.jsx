@@ -1,11 +1,25 @@
 import { Link } from "gatsby"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import logo from "../assets/logo.svg"
+import MobileNav from "../components/MobileNavigation"
 import "../styles/index.css"
 
 const Navigation = () => {
-  return (
+  const [width, setWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth)
+    }
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [width])
+
+  console.log(width)
+  return width < 1000 ? (
+    <MobileNav />
+  ) : (
     <Nav>
       <div className="nav-container">
         <Link to="/" className="logo">
