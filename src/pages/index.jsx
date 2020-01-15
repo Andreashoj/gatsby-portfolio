@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { AwesomeButton } from "react-awesome-button"
+import { Link } from "gatsby"
 import "react-awesome-button/dist/styles.css"
 import styled from "styled-components"
 import HeaderIllu from "../assets/frontpage_illustration.svg"
@@ -28,9 +29,11 @@ const Index = () => {
                 fantastic!
               </p>
               <Button>
-                <AwesomeButton type="primary" size="large" href="/projects">
-                  Look at my work
-                </AwesomeButton>
+                <Link to="/projects">
+                  <AwesomeButton type="primary" size="large">
+                    Look at my work
+                  </AwesomeButton>
+                </Link>
               </Button>
             </Header>
             <HeaderImage>
@@ -91,6 +94,7 @@ const HeaderImage = styled.div`
   }
   @media (max-width: 900px) {
     max-width: 100%;
+    height: auto;
   }
 `
 

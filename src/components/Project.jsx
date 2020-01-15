@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 
 const Project = ({ project }) => {
-  console.log(project.image)
   return (
     <ProjectContainer backgroundColor={project.backgroundColor}>
       <img src={project.image} alt="" className="project-logo" />

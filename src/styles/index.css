@@ -31,3 +31,7 @@ textarea {
   background-color: white;
   top: 0;
 }
+
+.aws-btn__content {
+  background-color: #6c63ff !important;
+}

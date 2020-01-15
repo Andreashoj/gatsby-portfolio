@@ -56,9 +56,15 @@ var styles = {
   bmItemList: {
     color: "#b8b7ad",
     padding: "0.8em",
+    display: "flex",
+    flexDirection: "column",
   },
   bmItem: {
     display: "inline-block",
+    margin: "10px 0",
+    textDecoration: "none",
+    color: "white",
+    fontSize: "30px",
   },
   bmOverlay: {
     background: "rgba(0, 0, 0, 0.3)",
