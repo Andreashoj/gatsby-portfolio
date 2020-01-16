@@ -69,6 +69,13 @@ p {
   width: 80%;
   max-width: 550px;
 }
+@media (max-width: 800px) {
+  width: 100%;
+  margin-top: 100px;
+  p {
+    width: 100%;
+  }
+}
 `
 
 const AboutContainer = styled.div`
@@ -101,6 +108,9 @@ const AboutContainer = styled.div`
         transform: translateY(-100%);
       }
     }
+  }
+  @media (max-width: 800px) {
+    flex-direction: column;
   }
 `
 
@@ -144,6 +154,9 @@ const AboutText = styled.div`
     font-size: 16px;
     width: 80%;
     max-width: 550px;
+    @media (max-width: 800px) {
+      width: 100%;
+    }
   }
 `
 
@@ -153,6 +166,13 @@ const HeaderImage = styled.div`
   img {
     height: 50%;
     width: 100%;
+  }
+  @media (max-width: 800px) {
+    width: 100%;
+    img {
+      height: 100%;
+      margin-bottom: 20px;
+    }
   }
 `
 

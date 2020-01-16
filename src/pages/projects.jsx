@@ -91,6 +91,9 @@ const Header = styled.div`
   p {
     font-size: 20px;
   }
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `
 
 const ProjectsWrapper = styled.div`
@@ -98,9 +101,9 @@ const ProjectsWrapper = styled.div`
   justify-content: space-between;
   margin-top: 50px;
   height: 70%;
+  flex-wrap: wrap;
   @media (max-width: 800px) {
     height: 100%;
-    flex-wrap: wrap;
   }
 `
 

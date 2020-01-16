@@ -47,7 +47,8 @@ const ContactForm = styled.form`
   height: 80%;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
+  max-width: 500px;
   align-items: center;
   input {
     width: 100%;
@@ -100,6 +101,24 @@ const ContactForm = styled.form`
       border: none;
       margin: 5px 0 20px 0;
       text-indent: 15px;
+    }
+  }
+  @media (max-width: 1920) {
+    .form-wrapper {
+      max-width: 1000px;
+    }
+  }
+  @media (max-width: 800px) {
+    max-width: 100%;
+    .contact-links {
+      flex-direction: column;
+      span {
+        display: none;
+      }
+      button {
+        width: 100%;
+        margin-bottom: 20px;
+      }
     }
   }
 `

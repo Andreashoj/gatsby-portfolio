@@ -29,6 +29,8 @@ const Project = ({ project }) => {
 
 const ProjectContainer = styled.div`
   position: relative;
+  flex-grow: 1;
+  margin: 10px;
   width: 23%;
   min-width: 200px;
   display: flex;
@@ -40,8 +42,8 @@ const ProjectContainer = styled.div`
   overflow: hidden;
   @media (max-width: 800px) {
     width: 100%;
-    margin-bottom: 20px;
-    height: 60%;
+    margin: 0 0 20px 0;
+    height: 40%;
   }
   .project-logo {
     width: 80%;
@@ -89,6 +91,21 @@ const ProjectContainer = styled.div`
     }
     .icon-wrapper {
       display: flex;
+      img {
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    &:hover {
+      transform: scale(1.05);
+      div {
+        top: 65%;
+      }
+    }
+    .card-wrapper {
+      height: 35%;
     }
   }
 

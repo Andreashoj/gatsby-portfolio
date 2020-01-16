@@ -41,7 +41,6 @@ const Index = () => {
             <HeaderImage>
               <img src={HeaderIllu} />
             </HeaderImage>
-            {width > 800 ? <Indicator /> : null}
           </IndexWrapper>
         </Layout>
       )}
