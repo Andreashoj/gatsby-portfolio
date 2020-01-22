@@ -4,7 +4,9 @@ import styled from "styled-components"
 const Project = ({ project }) => {
   return (
     <ProjectContainer backgroundColor={project.backgroundColor}>
-      <img src={project.image} alt="" className="project-logo" />
+      <ProjectLink href={project.live} target="_blank">
+        <img src={project.image} alt="" className="project-logo" />
+      </ProjectLink>
       <div className="card-wrapper">
         <div className="card-container">
           <div className="card-details">
@@ -18,7 +20,11 @@ const Project = ({ project }) => {
           </div>
           <div className="icon-wrapper">
             {project.icons.map(icon => (
-              <img src={icon} className="technology-icon" />
+              <img
+                src={icon.img}
+                title={icon.technology}
+                className="technology-icon"
+              />
             ))}
           </div>
         </div>
@@ -26,6 +32,13 @@ const Project = ({ project }) => {
     </ProjectContainer>
   )
 }
+
+const ProjectLink = styled.a`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`
 
 const ProjectContainer = styled.div`
   position: relative;

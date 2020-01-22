@@ -25,7 +25,7 @@ const Form = () => {
         <textarea type="textarea" id="message" rows="10" name="message" />
       </div>
       <div className="contact-links">
-        <button type="submit">Submit</button>
+        <button type="submit">Send</button>
         <span className="divider"></span>
         <div className="contact-icons">
           <a href="#">
