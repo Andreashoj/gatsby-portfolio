@@ -6,7 +6,7 @@ import html from "../assets/html.svg"
 import react from "../assets/react.svg"
 import sass from "../assets/sass.svg"
 import node from "../assets/node.svg"
-import stackit from "../assets/stackit.svg"
+import stackit from "../assets/stackit_info.svg"
 import modals from "../assets/modals.svg"
 import Project from "../components/Project"
 import Layout from "../layout"
@@ -17,7 +17,7 @@ const Projects = () => {
       name: "Stackit",
       description: "Robot Management",
       image: stackit,
-      backgroundColor: "#343434",
+      backgroundColor: "#262626",
       github: {
         link: "https://github.com/Andreashoj/stackit-test",
         icon: github,

@@ -28,10 +28,13 @@ const Form = () => {
         <button type="submit">Send</button>
         <span className="divider"></span>
         <div className="contact-icons">
-          <a href="#">
+          <a href="https://github.com/andreashoj" target="_blank">
             <img src={github} alt="" />
           </a>
-          <a href="#">
+          <a
+            href="https://www.linkedin.com/in/andreas-h%C3%B8j-a9838514b/"
+            target="_blank"
+          >
             <img src={linkedin} alt="" />
           </a>
           <a href="#">
