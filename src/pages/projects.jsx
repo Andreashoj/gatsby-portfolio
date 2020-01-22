@@ -5,6 +5,7 @@ import github from "../assets/github.svg"
 import html from "../assets/html.svg"
 import react from "../assets/react.svg"
 import sass from "../assets/sass.svg"
+import node from "../assets/node.svg"
 import stackit from "../assets/stackit.svg"
 import modals from "../assets/modals.svg"
 import Project from "../components/Project"
@@ -30,13 +31,22 @@ const Projects = () => {
       live: "https://jovial-wiles-9376eb.netlify.com/",
     },
     {
-      name: "Dashboard",
+      name: "Devdash (WIP)",
       description: "Oauth dashboard",
       image: "",
       backgroundColor: "#262626",
-      github: { link: "www.linkedin.com", icon: github },
-      icons: [{ technology: "github", img: github }],
-      live: "",
+      github: {
+        link: "https://github.com/Andreashoj/mern-setup",
+        icon: github,
+      },
+      icons: [
+        { technology: "css", img: css },
+        { technology: "html", img: html },
+        { technology: "sass", img: sass },
+        { technology: "react", img: react },
+        { technology: "node", img: node },
+      ],
+      live: "https://glacial-sands-90363.herokuapp.com/",
     },
     {
       name: "Budget Calculator",
