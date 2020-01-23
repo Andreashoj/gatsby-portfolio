@@ -4,10 +4,12 @@ import css from "../assets/css.svg"
 import github from "../assets/github.svg"
 import html from "../assets/html.svg"
 import react from "../assets/react.svg"
+import devdash from "../assets/devdash.svg"
 import sass from "../assets/sass.svg"
 import node from "../assets/node.svg"
 import stackit from "../assets/stackit_info.svg"
 import modals from "../assets/modals.svg"
+import budget from "../assets/budget_calculator.svg"
 import Project from "../components/Project"
 import Layout from "../layout"
 
@@ -33,8 +35,8 @@ const Projects = () => {
     {
       name: "Devdash (WIP)",
       description: "Oauth dashboard",
-      image: "",
-      backgroundColor: "#262626",
+      image: devdash,
+      backgroundColor: "black",
       github: {
         link: "https://github.com/Andreashoj/mern-setup",
         icon: github,
@@ -51,7 +53,7 @@ const Projects = () => {
     {
       name: "Budget Calculator",
       description: "CRUD budget calculator",
-      image: "",
+      image: budget,
       backgroundColor: "#F6F6F6",
       github: {
         link: "https://github.com/Andreashoj/budget-calculator",
